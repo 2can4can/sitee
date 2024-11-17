@@ -3,79 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled DOM Traversal</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Основные стили -->
+    <title>Interactive Single Page</title>
+    <!-- Подключение стилей -->
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
         }
-        header, footer {
-            background: #35424a;
+        header {
+            background-color: #4CAF50;
             color: white;
             padding: 1rem;
             text-align: center;
         }
         main {
-            padding: 1rem;
+            padding: 1.5rem;
             max-width: 800px;
             margin: 20px auto;
-            background: #ffffff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            margin-top: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         button {
-            background: #35424a;
+            background-color: #4CAF50;
             color: white;
             border: none;
-            padding: 0.5rem 1rem;
+            padding: 10px 20px;
             cursor: pointer;
+            font-size: 16px;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            margin-top: 10px;
         }
         button:hover {
-            background: #3c5d5a;
+            background-color: #45a049;
         }
-        a {
-            color: #35424a;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        p {
-            line-height: 1.6;
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #4CAF50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
         #output {
-            margin-top: 1rem;
+            margin-top: 15px;
             font-style: italic;
-            color: #666;
+            color: #555;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Styled DOM Traversal</h1>
+        <h1>Welcome to My Interactive Page</h1>
     </header>
     <main>
-        <h2>About</h2>
-        <p>This page demonstrates DOM traversal with styles and fonts included.</p>
-        <button id="startTraversal">Start Traversal</button>
+        <h2>About This Page</h2>
+        <p>This is an example of a single-page website with HTML, CSS, and JavaScript. Click the button below to see it in action!</p>
+        <button id="magicButton">Click Me</button>
         <p id="output"></p>
     </main>
     <footer>
-        <p>&copy; 2024 Styled DOM Traversal</p>
+        <p>&copy; 2024 My Interactive Page</p>
     </footer>
-    <script src="script.js"></script>
+
+    <!-- Подключение JavaScript -->
+    <script>
+        // Дождаться загрузки DOM
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('magicButton');
+            const output = document.getElementById('output');
+
+            // Обработчик нажатия на кнопку
+            button.addEventListener('click', () => {
+                const now = new Date();
+                const message = `Button clicked! Current time is: ${now.toLocaleTimeString()}`;
+                output.textContent = message;
+                console.log(message); // Вывод в консоль
+            });
+        });
+    </script>
 </body>
 </html>
 
