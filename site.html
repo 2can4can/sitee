@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Traversal Example</title>
+    <title>Styled DOM Traversal</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Основные стили -->
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f4f4f9;
             color: #333;
             margin: 0;
@@ -35,25 +40,42 @@
             padding: 0.5rem 1rem;
             cursor: pointer;
             border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
         button:hover {
             background: #3c5d5a;
+        }
+        a {
+            color: #35424a;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            line-height: 1.6;
+        }
+        #output {
+            margin-top: 1rem;
+            font-style: italic;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>DOM Traversal Demo</h1>
+        <h1>Styled DOM Traversal</h1>
     </header>
     <main>
         <h2>About</h2>
-        <p>This page demonstrates DOM traversal using JavaScript.</p>
+        <p>This page demonstrates DOM traversal with styles and fonts included.</p>
         <button id="startTraversal">Start Traversal</button>
-        <p id="output" style="margin-top: 1rem; font-style: italic;"></p>
+        <p id="output"></p>
     </main>
     <footer>
-        <p>&copy; 2024 DOM Traversal Example</p>
+        <p>&copy; 2024 Styled DOM Traversal</p>
     </footer>
     <script src="script.js"></script>
 </body>
 </html>
+
